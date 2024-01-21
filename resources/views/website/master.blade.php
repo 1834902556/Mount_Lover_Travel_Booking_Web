@@ -14,6 +14,8 @@
 
     @include('website.include.header')
 
+    @include('website.include.navbar')
+
     @yield('content')
 
     @include('website.include.footer')

@@ -26,7 +26,7 @@ Edit Tour
                 <h4 class="card-title">Edit Tour</h4>
                 <hr>
                 <h4 class="text-center text-success">{{session('msg')}}</h4>
-                <form class="form-horizontal p-t-20" method="post" action="{{route('create.tour')}}" enctype="multipart/form-data">
+                <form class="form-horizontal p-t-20" method="post" action="{{route('update.tour',['id'=>$tour->id])}}" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group row mb-3">
                         <label for="exampleInputuname3" class="col-sm-3 control-label">Place Name</label>
@@ -74,7 +74,7 @@ Edit Tour
                         <label for="exampleInputuname3" class="col-sm-3 control-label">Total Person</label>
                         <div class="col-sm-9">
                             <div class="input-group">
-                                <input type="text" class="form-control" id="person" name="person" placeholder="Total Person" value="{{$tour->person}}>
+                                <input type="text" class="form-control" id="person" name="person" placeholder="Total Person" value="{{$tour->person}}">
                             </div>
                         </div>
                     </div>
@@ -82,7 +82,7 @@ Edit Tour
                         <label for="exampleInputuname3" class="col-sm-3 control-label">Tour Duration</label>
                         <div class="col-sm-9">
                             <div class="input-group">
-                                <input type="text" class="form-control" id="duration" name="duration" placeholder="Tour Duration" value="{{$tour->duration}}>
+                                <input type="text" class="form-control" id="duration" name="duration" placeholder="Tour Duration" value="{{$tour->duration}}">
                             </div>
                         </div>
                     </div>
@@ -90,7 +90,7 @@ Edit Tour
                         <label for="exampleInputuname3" class="col-sm-3 control-label">Tour Cost Per Person</label>
                         <div class="col-sm-9">
                             <div class="input-group">
-                                <input type="text" class="form-control" id="name" name="total_cost" placeholder="Tour Cost" value="{{$tour->total_cost}}>
+                                <input type="text" class="form-control" id="name" name="total_cost" placeholder="Tour Cost" value="{{$tour->total_cost}}">
                             </div>
                         </div>
                     </div>
@@ -130,7 +130,7 @@ Edit Tour
                     </div>
                     <div class="form-group row m-b-0">
                         <div class="offset-sm-3 col-sm-9">
-                            <button type="submit" class="btn btn-success waves-effect waves-light text-white">Create</button>
+                            <button type="submit" class="btn btn-success waves-effect waves-light text-white">update</button>
                         </div>
                     </div>
                 </form>

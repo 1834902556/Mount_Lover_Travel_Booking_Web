@@ -31,8 +31,12 @@ Route::get('/team',[MountLoverController::class,'team'])->name('team');
 
 Route::get('/book-now/{id}',[BookingController::class,'index'])->name('book-now');
 
-Route::get('/customer-login',[CustomerAuthController::class,'login'])->name('customer-login');
-Route::get('/customer-register',[CustomerAuthController::class,'register'])->name('customer-register');
+Route::get('/customer-login',[CustomerAuthController::class,'loginView'])->name('customer-login');
+Route::get('/customer-reg',[CustomerAuthController::class,'registerView'])->name('customer-register');
+Route::post('/customer-login',[CustomerAuthController::class,'login'])->name('cus-login');
+Route::post('/customer-register',[CustomerAuthController::class,'register'])->name('cus-register');
+Route::get('/customer-register',[CustomerAuthController::class,'cusDashboard'])->name('cus-dashboard');
+Route::get('/customer-logout',[CustomerAuthController::class,'logout'])->name('cus-logout');
 
 
 

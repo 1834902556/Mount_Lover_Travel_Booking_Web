@@ -37,6 +37,36 @@ class Tour extends Model
         self::$tour->save();
     }
 
+    public static function updateTour($request,$id){
+        self::$tour = Tour::find($id);
+        self::$tour->place_id               = $request->place_id;
+        self::$tour->spot_id                = $request->spot_id;
+        self::$tour->title                  = $request->title;
+        self::$tour->category               = $request->category;
+        self::$tour->person                 = $request->person;
+        self::$tour->duration               = $request->duration;
+        self::$tour->total_cost             = $request->total_cost;
+        self::$tour->sort_description       = $request->sort_description;
+        self::$tour->long_description       = $request->long_description;
+        self::$tour->status                 = $request->status;
+        if($request->file('image')){
+           if(file_exists(self::$tour->image)){
+            unlink(self::$tour->image);
+           }
+           self::$tour->image = self::getImageUrl($request);
+        }
+        self::$tour->image = self::$tour->image;
+        self::$tour->save();
+
+    }
+
+    public static function deleteTour($id){
+        self::$tour = Tour::find($id);
+        if(file_exists(self::$tour->image)){
+            unlink(self::$tour->image);
+        }
+        self::$tour->delete();
+    }
 
     public function place(){
         return $this->belongsTo(Place::class);
@@ -44,4 +74,5 @@ class Tour extends Model
     public function spot(){
         return $this->belongsTo(Spot::class);
     }
+
 }

@@ -7,7 +7,7 @@ use App\Models\Tour;
 class MountLoverController extends Controller
 {
     public function index(){
-        return view('website.home.index',['tours'=>Tour::all()]);
+        return view('website.index',['tours'=>Tour::all()]);
     }
     public function about(){
         return view('website.about.index');

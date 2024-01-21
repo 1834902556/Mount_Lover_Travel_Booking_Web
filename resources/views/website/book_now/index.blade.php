@@ -5,7 +5,6 @@ Book-now
 @endsection
 
 @section('content')
-
     <!-- Booking Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
@@ -24,7 +23,7 @@ Book-now
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control bg-transparent" id="name" name="name" placeholder="Your Name">
+                                        <input type="text" class="form-control bg-transparent" id="name" name="name" placeholder="Your Name"value="{{Session::get('customer_name')}}">
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>

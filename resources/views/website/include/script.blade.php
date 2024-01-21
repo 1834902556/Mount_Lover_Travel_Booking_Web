@@ -7,6 +7,4 @@
 <script src="{{asset('/')}}/website/lib/tempusdominus/js/moment.min.js"></script>
 <script src="{{asset('/')}}/website/lib/tempusdominus/js/moment-timezone.min.js"></script>
 <script src="{{asset('/')}}/website/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-<!-- Template Javascript -->
 <script src="{{asset('/')}}/website/js/main.js"></script>

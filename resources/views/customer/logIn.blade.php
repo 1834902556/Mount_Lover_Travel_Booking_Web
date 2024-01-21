@@ -11,16 +11,16 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-6 col-xl-5">
                         <div class="card overflow-hidden">
-                            <div class="bg-primary bg-soft">
+                            <div class="bg-danger">
                                 <div class="row">
                                     <div class="col-7">
-                                        <div class="text-primary p-4">
-                                            <h5 class="text-primary">Welcome Back !</h5>
+                                        <div class="text-black p-4">
+                                            <h5 class="text-black">Welcome Back !</h5>
                                             <p>Sign in to continue to Mount Lover.</p>
                                         </div>
                                     </div>
                                     <div class="col-5 align-self-end">
-                                        <img src="assets/images/profile-img.png" alt="" class="img-fluid">
+                                        <img src="" alt="" class="img-fluid">
                                     </div>
                                 </div>
                             </div>
@@ -29,7 +29,7 @@
                                     <a href="index.html" class="auth-logo-light">
                                         <div class="avatar-md profile-user-wid mb-4">
                                             <span class="avatar-title rounded-circle bg-light">
-                                                <img src="assets/images/logo-light.svg" alt="" class="rounded-circle" height="34">
+                                                <img src="" alt="" class="rounded-circle" height="34">
                                             </span>
                                         </div>
                                     </a>
@@ -37,14 +37,14 @@
                                     <a href="index.html" class="auth-logo-dark">
                                         <div class="avatar-md profile-user-wid mb-4">
                                             <span class="avatar-title rounded-circle bg-light">
-                                                <img src="assets/images/logo.svg" alt="" class="rounded-circle" height="34">
+                                                <img src="{{asset('/')}}website/img/mountlover.jpg" alt="" class="rounded-circle" height="34">
                                             </span>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="p-2">
-                                    <form class="form-horizontal" action="" method="POST">
-
+                                    <form class="form-horizontal" action="{{route('cus-login')}}" method="POST">
+                                        @csrf
                                         <div class="mb-3">
                                             <label for="username" class="form-label">Email</label>
                                             <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
@@ -66,15 +66,15 @@
                                         </div>
 
                                         <div class="mt-3 d-grid">
-                                            <button class="btn btn-primary waves-effect waves-light" type="submit">Log In</button>
+                                            <button class="btn btn-danger waves-effect waves-light" type="submit">Log In</button>
                                         </div>
-
+                                        <h1>{{session('msg')}}</h1>
                                         <div class="mt-4 text-center">
                                             <h5 class="font-size-14 mb-3">Sign in with</h5>
 
                                             <ul class="list-inline">
                                                 <li class="list-inline-item">
-                                                    <a href="javascript::void()" class="social-list-item bg-primary text-white border-primary">
+                                                    <a href="javascript::void()" class="social-list-item bg-danger text-white border-danger">
                                                         <i class="mdi mdi-facebook"></i>
                                                     </a>
                                                 </li>
@@ -102,10 +102,9 @@
                         <div class="mt-5 text-center">
 
                             <div>
-                                <p>Don't have an account ? <a href="{{route('customer-register')}}" class="fw-medium text-primary"> Sign Up </a> </p>
+                                <p>Don't have an account ? <a href="{{route('customer-register')}}" class="fw-medium text-danger"> Sign Up </a> </p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

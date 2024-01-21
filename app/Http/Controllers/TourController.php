@@ -33,4 +33,13 @@ class TourController extends Controller
             'spots'     => Spot::all()
         ]);
     }
+
+    public function update(Request $request,$id){
+        Tour::updateTour($request,$id);
+        return redirect('/manage-tour')->with('msg','Tour updated succesfully');
+    }
+    public function delete($id){
+        Tour::deleteTour($id);
+        return redirect('/manage-tour')->with('msg','Tour deleted succesfully');
+    }
 }
