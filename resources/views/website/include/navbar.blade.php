@@ -1,7 +1,7 @@
 
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark px-4 px-lg-5 py-3 py-lg-0">
             <a href="" class="navbar-brand p-0">
                 <h1 class="text-danger m-0"><img src="{{asset('/')}}/website/img/mountlover.jpg" alt="Logo" height="40px" width="40px">Mount Lover</h1>
             </a>

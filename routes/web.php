@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MountLoverController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckOutController;
 use App\Http\Controllers\CustomerAuthController;
 use App\Http\Controllers\PlaceController;
 use App\Http\Controllers\SpotController;
@@ -28,6 +30,11 @@ Route::get('/service',[MountLoverController::class,'service'])->name('service');
 Route::get('/destination',[MountLoverController::class,'destination'])->name('destination');
 Route::get('/booking',[MountLoverController::class,'booking'])->name('booking');
 Route::get('/team',[MountLoverController::class,'team'])->name('team');
+Route::get('/detail/{id}', [AdminController::class, 'detail'])->name('show-detail');
+Route::post('/confirm-booking/{id}', [CartController::class, 'addCart'])->name('add.cart');
+Route::get('/confirm-booking', [CartController::class, 'cart'])->name('show-cart');
+
+
 
 Route::get('/book-now/{id}',[BookingController::class,'index'])->name('book-now');
 

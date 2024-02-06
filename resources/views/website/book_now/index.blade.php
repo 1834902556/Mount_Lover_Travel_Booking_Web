@@ -19,7 +19,7 @@ Book-now
                     </div>
                     <div class="col-md-6">
                         <h1 class="text-white mb-4">Book A Tour</h1>
-                        <form>
+                        <form >
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
@@ -45,12 +45,7 @@ Book-now
                                         <label for="phone">Tour Title</label>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent datetimepicker-input" id="datetime" name="data" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
-                                        <label for="datetime">Date & Time</label>
-                                    </div>
-                                </div>
+                                <div class="col-md-12">
                                 <div class="col-12">
                                     <div class="form-floating">
                                         <textarea class="form-control bg-transparent" placeholder="Special Request" id="message" style="height: 100px"></textarea>
